@@ -1,0 +1,96 @@
+html,body{
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    font-size: 12px;
+    word-wrap: break-word;
+    -webkit-user-select: none;
+    font-family: "Helvetica Neue",Helvetica,Arial,Sans-serif;
+    color:#393939;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+}
+ul,ol,li,dl,dt,dd,label{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+table,tr,td{
+    margin: 0;
+    padding: 0; 
+    border-spacing:0;
+    border:0;
+    border-collapse:collapse;
+}
+img,button{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+input{
+    padding: 0; 
+    margin: 0; 
+    outline: none;
+}
+input[type="button"]{
+    -webkit-appearance:none;
+    outline:none;
+    border:0 none;
+}
+input[type="number"]{
+    -webkit-appearance:none;
+}
+input[type="checkbox"],input[type="radio"]{
+    margin-right:5px; 
+    border: 0 none; 
+    outline: none;
+}
+i,em{
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+}
+p,span,b{
+    margin: 0;
+    padding: 0;
+}
+a{
+    outline:none;
+    margin: 0;
+    padding:0;
+}
+a:link{
+    text-decoration:none;
+}
+a:visited{
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:none;
+}
+a:active{
+    text-decoration:none;
+}
+body::input-placeholder{
+    line-height:normal;
+}
+a,button,input,div,i{
+    -webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+button{
+    outline:none;
+    -webkit-text-size-adjust:none;
+    list-style: none;
+    border: 0; 
+    -webkit-appearance: none;
+    font-size: 12px;
+    background-color: rgba(0,0,0,0);
+}

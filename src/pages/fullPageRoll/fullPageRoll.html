@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="照明,雷士照明,商业照明,灯具,灯,节能灯,筒灯,射灯,吸顶灯,专业照明,店铺照明,家庭照明,家居照明,办公照明,户外照明,光源,电器,nvc,nvc lighting,镇流器,镇流器,照明应用,照明发展趋势,照明技术,工业照明">
+    <meta name="Description" content="雷士光电科技有限公司成立于1998年，经过10多年的高速发展，成长为优秀的专业照明灯具与光源电气企业之一，在商业照明领域一直保持领先地位。“NVC雷士照明”品牌已成为中国照明行业领袖品牌，“，产品涵盖商业照明、办公照明、家居照明、光源电器、建筑照明等系列数千个品种，全面为客户提供优质的照明产品、照明设计和照明应用解决方案。">
+    <title>首页 - 雷士伯克丽官网</title>
+</head>
+
+<body>
+    <div id="body" v-cloak>
+        <!-- 第一屛 -->
+        <div class="first_box page page_active" >
+            <div class="top" :style="{height:0.259*clientHeight+'px'}">
+                <div class="main_top_wrap" :style="{minWidth:1.11*clientHeight+'px',height:0.055*clientHeight+'px'}">
+                    <div class="main_top" :style="{width:1.11*clientHeight+'px'}">
+                        <a class="index_btn" href="http://www.nvc-lighting.com.cn/index.html" :style="{lineHeight:0.055*clientHeight+'px'}">雷士官网商城</a>
+                        <div class="main_top_right" :style="{lineHeight:0.055*clientHeight+'px'}">
+                            <div class="search_box" :style="{width:0.167*clientHeight+'px',marginTop:0.014*clientHeight+'px'}">
+                                <input type="text" v-model.trim="keywords" placeholder="搜索" :style="{width:0.142*clientHeight+'px'}">
+                                <i class="ico_search" @click="search"></i>
+                            </div>
+                            <div class="main_top_right_list">
+                                <a href="myMaterial.html" v-if="isLogin" :style="{lineHeight:0.055*clientHeight+'px'}">欢迎{{userName+sex}}</a>
+                                <a :href="loginUrl" v-if="!isLogin" :style="{lineHeight:0.055*clientHeight+'px'}">登录</a>
+                                <a href="register.html" v-if="!isLogin" :style="{lineHeight:0.055*clientHeight+'px'}">注册</a>
+                                <a href="myCollection.html" :style="{lineHeight:0.055*clientHeight+'px'}">我的收藏({{collectionTotal}})</a>
+                                <a href="javascript:;" :style="{lineHeight:0.055*clientHeight+'px'}">English</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_nav_wrap" :style="{minWidth:1.11*clientHeight+'px',paddingTop:0.033*clientHeight+'px'}">
+                    <div class="main_nav clearfix" :style="{width:1.11*clientHeight+'px'}">
+                        <span class="top_title" :style="{width:0.243*clientHeight+'px',height:0.093*clientHeight+'px'}">
+                        <!-- wh:263*100 -->
+                            <img src="./imgs/top_logo.png" alt="">
+                        </span>
+                        <ul class="nav_list clearfix" :style="{marginTop:0.0148*clientHeight+'px'}">
+                            <li :style="{margin:'0 '+0.040*clientHeight+'px'}"><a class="list_name" :class="{list_active:uri.indexOf('index.html')>-1}" href="index.html" >首页</a></li>
+                            <li class="classify_list" :style="{margin:'0 '+0.040*clientHeight+'px'}">
+                                <a class="list_name" :class="{list_active:uri.indexOf('productClassify.html')>-1}" href="productClassify.html">产品分类</a>
+                                <ul class="secondary_list">
+                                    <li v-for="list in goodsClassifyList" :key="list.id"><a :class="{list_active:uri.indexOf('classifyLists.html?id='+list.id)>-1}" :href="'classifyLists.html?id='+list.id">{{list.name}}</a></li>
+                                    <!-- <li><a href="">吊灯</a></li>
+                                    <li><a href="">落地灯</a></li>
+                                    <li><a href="">台灯</a></li>
+                                    <li><a href="">壁灯</a></li> -->
+                                </ul>
+                            </li>
+                            <li :style="{margin:'0 '+0.040*clientHeight+'px'}"><a class="list_name" :class="{list_active:uri.indexOf('aboutUs.html')>-1}" href="aboutUs.html">关于Berkeley</a></li>
+                            <li :style="{margin:'0 '+0.040*clientHeight+'px'}"><a class="list_name" :class="{list_active:uri.indexOf('designerIndex.html')>-1}" href="designerIndex.html">设计师频道</a></li>
+                            <li :style="{margin:'0 '+0.040*clientHeight+'px'}"><a class="list_name" :class="{list_active:uri.indexOf('retailStore.html')>-1}" href="retailStore.html">门店查询</a></li>
+                            <li  :style="{margin:'0 '+0.040*clientHeight+'px'}"><a class="list_name" :class="{list_active:uri.indexOf('commercialCase.html')>-1}" href="commercialCase.html">商业空间案例</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <slide width="100%" :height="0.741*clientHeight" :slide-list="slideList" play="true" v-if="slideList.length"></slide>
+            <!-- 首页  动态消息 -->
+            <div class="message_reminder" :style="{bottom:0.111*clientHeight+'px'}">
+                <!-- 展开后 -->
+                <transition name="goRight">
+                    <div class="message_reminder_show" v-show="isMessageShow">
+                        <span class="delete_btn" @click="isMessageShow=false"></span>
+                        <p class="text">现在注册盛情Berkeley伯克利最新新闻和活动咨询，我们将第一时间与你分享伯克利的最新动态！</p>
+                        <div class="input_box">
+                            <input type="text" v-model="recordEmail" placeholder="请输入您的电子邮箱" @input="verify">
+                            <button class="commit_btn" @click="submitEmail">提交</button>
+                            <p>{{emailMsg}}</p>
+                        </div>
+                    </div>
+                </transition>
+                <!-- 展开前 -->
+                <transition name="goLeft">
+                <div class="message_reminder_btn" @click="isMessageShow=true" v-show="!isMessageShow">
+                    <span class="book_btn">预定最新资讯</span>
+                </div>
+                </transition>
+            </div>
+        </div>
+        <!-- 第二屏 -->
+        <div class="second_box page"  :style="{height:clientHeight+'px'}">
+            <div class="yellow_bg" :style="{height:0.59*clientHeight+'px'}"></div>
+            <div class="second_box_main" :style="{width:1.11*clientHeight+'px'}">
+                <div class="title_show title_brand_story">
+                    <span class="title_show_name">品牌故事</span>
+                </div>
+                <!-- 文字 -->
+                <div class="brand_story_text clearfix" :style="{minWidth:1.11*clientHeight+'px',height:0.240*clientHeight+'px',marginBottom:0.060*clientHeight+'px'}">
+                    <div class="brand_story_text_left">
+                        <p v-html="storyOne"></p>
+                    </div>
+                    <!-- 一行最多只能放13个字，最多6行 -->
+                    <div class="brand_story_text_right">
+                        <p v-html="storyTwo"></p>
+                        
+                    </div>
+                </div>
+                <!-- 图片轮播 wrap -->
+                <div class="brand_story_slide" :style="{width:1.065*clientHeight+'px',height:0.55*clientHeight+'px'}">
+                    <div :style="{width:0.74*clientHeight+'px'}">
+                        <!-- 图片轮播 -->
+                        <slide :width="0.74*clientHeight" :height="0.55*clientHeight" :slide-list="berkeleySlideList" play="true" v-if="berkeleySlideList.length"></slide>
+                    </div>
+                    <!-- 配字 -->
+                    <div class="brand_story_slide_text" :style="{top:-0.068*clientHeight+'px',height:0.463*clientHeight+'px',width:0.46*clientHeight+'px',padding:0.056*clientHeight+'px'}">
+                        <!-- 最多7行 1行7个 -->
+                        <div class="summary_text" :style="{height:0.259*clientHeight+'px'}" v-html="berkeleyText"></div>
+                        <a class="more_btn" :href="berkeleyUrl" :style="{right:0.037*clientHeight+'px',bottom:0.037*clientHeight+'px'}">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第三屏 -->
+        <div class="third_box "  :style="{height:clientHeight+'px'}">
+            <div class="third_box_main" :style="{width:1.13*clientHeight+'px'}">
+                <div class="title_show title_product_display">
+                    <span class="title_show_name">产品展示</span>
+                </div>
+                <!-- 5种分类 -->
+                <div class="classify_content clearfix" v-if="classifyList">
+                    <!-- wh:224*280 -->
+                    <a class="classify_list" href="javascript:;" v-for="(list,index) in classifyList" :style="{height:0.259*clientHeight+'px',width:0.207*clientHeight+'px',marginRight:0.018*clientHeight+'px'}" :key="list.id" @click="changeActiveIndex(index)">
+                        <img :src="list.image" alt="">
+                        <p class="classify_list_name">{{list.name}}</p>
+                    </a>
+                </div>
+                <!-- 分类详情列表 -->
+                <ul class="classify_detail_content" :style="{marginTop:0.056*clientHeight+'px',height:0.55*clientHeight+'px'}" v-if="goodsList&&goodsList.length>0">
+                    <!-- wh:285*580 -->
+                    <!-- 只放4个 -->
+                    <li class="classify_detail_list" v-for="list in goodsList" :style="{height:0.537*clientHeight+'px',width:0.263*clientHeight+'px',marginRight:0.018*clientHeight+'px'}" :key="list.id">
+                        <!-- wh:285*420 -->
+                        <a class="classify_detail_list_img" :href="'http://www.nvc-lighting.com.cn/productDetail.html?unifiedMerchandiseId='+list.unifiedMerchandiseId" :style="{height:0.389*clientHeight+'px',width:0.263*clientHeight+'px'}"><img :src="list.image" alt=""></a>
+                        <p class="classify_detail_list_name">{{list.name}}</p>
+                        <a class="check_btn" :href="'http://www.nvc-lighting.com.cn/productDetail.html?unifiedMerchandiseId='+list.unifiedMerchandiseId">查看详情 >></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 第四屏 -->
+        <div class="forth_box " :style="{height:clientHeight+'px'}">
+            <a :href="localUrl" class="img_brand_position" :style="{height:0.668*clientHeight+'px',minWidth:1.11*clientHeight+'px','background-image':'url('+localImage+')'}">
+                <div class="title_brand_position_wrap" :style="{minWidth:1.11*clientHeight+'px'}">
+                    <div class="title_show title_brand_position">
+                        <span class="title_show_name">品牌定位</span>
+                    </div>
+                </div>
+            </a>
+            <div class="index_foot">
+                <div class="foot" :style="{minWidth:1.11*clientHeight+'px'}">
+                    <div class="title_foot" :style="{minWidth:1.11*clientHeight+'px',height:0.060*clientHeight+'px'}">
+                        <!-- wh:132*50 -->
+                        <img src="./imgs/foot_logo.png" alt="" :style="{width:0.122*clientHeight+'px',height:0.046*clientHeight+'px'}">
+                    </div>
+                    <!-- h:190 -->
+                    <div class="main_foot clearfix" :style="{width:1.11*clientHeight+'px'}">
+                        <div class="lists">
+                            <h3>关注Berkeley</h3>
+                            <a href="brandProfile.html">品牌简介</a>
+                            <a href="aboutUs.html">新闻动态</a>
+                            <a href="contactUs.html">联系我们</a>
+                        </div>
+                        <div class="lists">
+                            <h3>服务与支持</h3>
+                            <a href="http://www.nvc-lighting.com.cn/shoppingGuide.html">购物指南</a>
+                            <a href="http://www.nvc-lighting.com.cn/sendIllustration.html">配送说明</a>
+                            <a href="http://www.nvc-lighting.com.cn/afterSale.html">售后服务</a>
+                        </div>
+                        <div class="phone_content">
+                            <h3>24小时全国服务热线</h3>
+                            <p class="phone">400-894-0606</p>
+                            <span class="service_btn">24小时在线客服</span>
+                        </div>
+                        <div class="qr_content">
+                            <div class="img_box">
+                                <img src="./imgs/qrcode.png" alt="">
+                            </div>
+                            <p class="name_one">扫一扫关注</p>
+                            <p class="name_two">Berkeley公众号</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

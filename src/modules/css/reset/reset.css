@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Microsoft YaHei",Tahoma, Helvetica, Arial, sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+}
+ul,ol,li,dl,dt,dd,label{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+table,tr,td{
+    margin: 0;
+    padding: 0; 
+    border-spacing:0;
+    border:0;
+    border-collapse:collapse;
+}
+img,button{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+textarea{
+    outline: none;
+}
+input{
+    padding: 0; 
+    margin: 0; 
+    outline: none;
+}
+input[type="checkbox"],input[type="radio"]{
+    margin-right:5px; 
+    border: 0 none; 
+    outline: none;
+}
+i,em{
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+}
+p,span,b{
+    margin: 0;
+    padding: 0;
+}
+a{
+    outline:none;
+    margin: 0;
+    padding:0;
+}
+a:link{
+    text-decoration:none;
+}
+a:visited{
+    text-decoration:none;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:active{
+    text-decoration:none;
+}
+
+
+
+/*该项目的样式重置*/
+
+body {
+  color: #000;
+}
+
+p{
+  letter-spacing: 1px;
+}
+
+button{
+    outline:none;
+}
+
+

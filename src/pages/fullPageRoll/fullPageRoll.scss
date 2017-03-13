@@ -1,0 +1,778 @@
+@import "../../modules/sass/common.scss";
+
+html,body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#body {
+  // overflow: hidden;
+  position: relative;
+  transition:top .5s .2s;
+  height: 2000%;
+}
+/* 第一部分*/ 
+.first_box {
+  position: relative;
+  top:0;
+  .carousel-items {
+    top: 95%;
+    span {
+      height: 13px;
+      width: 13px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0);
+    }
+    .active {
+      border-color: $theme_color;
+      background-color: $theme_color;
+    }
+  }
+}
+
+/* 首页 动态消息*/ 
+.message_reminder{
+  position: absolute;
+  right: 0;
+  z-index: 10; 
+  height: 260px;
+  width: 420px;
+}
+.message_reminder_show{
+  position: relative;
+  right: 0;
+  top:0;
+  height: 260px;
+  width: 420px;
+  box-sizing:border-box;
+  padding:50px 35px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px 1px rgba(0,0,0,.25);
+  z-index: 2;
+  .delete_btn{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: block;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    background: url(./imgs/ico_delete.png) no-repeat center;
+  }
+  .text{
+    line-height: 32px;
+    color: $subhead_color1;
+    font-size: 18px;
+    height: 96px;
+    overflow: hidden;
+  }
+  .input_box{
+    margin-top: 22px;
+    overflow: hidden;
+    input[type=text]{
+      float: left;
+      width: 260px;
+      height: 42px;
+      box-sizing:border-box;
+      padding:0 5px;
+      font-size: 18px;
+      border-top:1px solid $theme_color;
+      border-bottom:1px solid $theme_color;
+      border-left:1px solid $theme_color;
+    }
+    .commit_btn{
+      display: block;
+      float: left;
+      width: 80px;
+      height: 42px;
+      background-color: $match_color1;
+      color: $theme_color;
+      font-size: 18px;
+      line-height: 42px;
+      cursor: pointer;
+    }
+  }
+}
+.message_reminder_btn{
+  position: absolute;
+  top:50%;
+  right:0;
+  height: 260px;
+  width: 50px;
+  margin-top: -130px;
+  background-color: $theme_color;
+  border-radius: 5px;
+  z-index: 1;
+  cursor: pointer;
+  .book_btn{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 18px;
+    line-height: 18px;
+    color: $subhead_color1;
+    text-align: center;
+    &:before{
+      position: absolute;
+      top: 50%;
+      left: -7px;
+      transform: translateY(-50%);
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 4px solid transparent;
+      border-right: 7px solid $subhead_color1;
+      border-bottom: 4px solid transparent;
+    }
+  }
+}
+/* 第二部分*/ 
+.second_box {
+  position: relative;
+  top:810px;
+  background-color: #fff;
+  .yellow_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $theme_color;
+  }
+  .second_box_main {
+    position: relative;
+    margin: 0 auto;
+  }
+  .brand_story_text {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    z-index: 10;
+    font-size: 20px;
+    line-height: 34px;
+    color: #fff;
+    overflow: hidden;
+    @include responsive(wide_screens) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    @include responsive(medium_screens) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    @include responsive(small_screens) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    @include responsiveh(medium_height_screens) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    @include responsiveh(small_height_screens) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .brand_story_text_left {
+    float: left;
+    width: 50%;
+    text-align: left;
+  }
+  .brand_story_text_right {
+    float: right;
+    width: 300px;
+    text-align: left;
+  }
+  /* 图片轮播 wrap*/
+  .brand_story_slide {
+    position: relative;
+    margin: 0 auto;
+    .carousel-items {
+      right: 10px;
+      top: 95%;
+      text-align: right;
+      margin-right: 10px;
+      span {
+        height: 5px;
+        width: 20px;
+        background-color: rgba(255, 255, 255, .8);
+      }
+      .active {
+        background-color: $theme_color;
+      }
+    }
+    .brand_story_slide_text {
+      position: absolute;
+      right: 0;
+      top: 0;
+      box-sizing: border-box;
+      background-color: $match_color2;
+      overflow: hidden;
+    }
+    .summary_text {
+      font-size: 18px;
+      line-height: 40px;
+      color: #fff;
+      overflow: hidden;
+      @include responsive(wide_screens) {
+        font-size: 16px;
+        line-height: 32px;
+      }
+      @include responsive(medium_screens) {
+        font-size: 14px;
+        line-height: 26px;
+      }
+      @include responsiveh(medium_height_screens) {
+        font-size: 16px;
+        line-height: 26px;
+      }
+      @include responsiveh(small_height_screens) {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+    .more_btn {
+      position: absolute;
+      height: 40px;
+      width: 120px;
+      font-size: 20px;
+      line-height: 40px;
+      text-align: center;
+      background-color: $theme_color;
+      color: $subhead_color1;
+      text-decoration: none;
+      @include responsive(wide_screens) {
+        height: 36px;
+        width: 105px;
+        font-size: 16px;
+        line-height: 36px;
+      }
+      @include responsive(medium_screens) {
+        height: 30px;
+        width: 90px;
+        font-size: 14px;
+        line-height: 30px;
+      }
+      @include responsive(small_screens) {
+        height: 24px;
+        width: 75px;
+        font-size: 12px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+/* 第三部分*/ 
+.third_box {
+  position: relative;
+  top:1620px;
+  background-color: #fff;
+  .third_box_main{
+    margin:0 auto;
+  }
+  /* 5种分类 */
+  .classify_content {
+    text-align: center;
+    .classify_list {
+      position: relative;
+      display: block;
+      float: left;
+      margin-right: 20px;
+      color: $subhead_color1;
+      &:nth-child(4n){
+        margin-right: 0;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+      &:hover {
+        box-shadow: 0 2px 5px 1px rgba(0, 0, 0, .25);
+      }
+    }
+    .classify_list_name{
+      position: absolute;
+      bottom:0;
+      left:0;
+      width: 100%;
+      text-align: center;
+      font-size: 20px;
+      line-height: 54px;
+      @include responsive(wide_screens) {
+        font-size: 18px;
+        line-height: 48px;
+      }
+      @include responsiveh(medium_height_screens) {
+        line-height: 30px;
+        font-size: 16px;
+      }
+      @include responsiveh(small_height_screens) {
+        line-height: 30px;
+        font-size: 14px;
+      }
+    }
+  }
+  /* 分类详情列表 */
+  .classify_detail_content {
+    overflow: hidden;
+    text-align: center;
+  }
+  .classify_detail_list {
+    position: relative;
+    display: inline-block;
+    background-color: $bg_color;
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+    &:hover {
+      box-shadow: 0 2px 5px 1px rgba(0, 0, 0, .25);
+    }
+    .check_btn {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      height: 28px;
+      width: 98px;
+      line-height: 28px;
+      text-align: center;
+      text-decoration: none;
+      color: $subhead_color3;
+      border: 1px solid $subhead_color3;
+      &:hover {
+        color: $theme-color;
+        border: 1px solid $theme_color;
+      }
+      @include responsiveh(medium_height_screens) {
+        height: 24px;
+        width: 90px;
+        line-height: 24px;
+        font-size: 14px;
+      }
+      @include responsiveh(small_height_screens) {
+        height: 20px;
+        width: 80px;
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+  .classify_detail_list_name {
+    width: 90%;
+    margin: 10px auto 0;
+    line-height: 28px;
+    font-size: 16px;
+    height: 56px;
+    text-align: left;
+    overflow: hidden;
+    @include responsive(wide_screens) {
+      line-height: 24px;
+      font-size: 14px;
+      height: 48px;
+    }
+    @include responsive(medium_screens) {
+      line-height: 18px;
+      font-size: 12px;
+      height: 36px;
+    }
+    @include responsive(small_screens) {
+      line-height: 18px;
+      font-size: 14px;
+      height: 18px;
+    }
+    @include responsiveh(medium_height_screens) {
+      line-height: 18px;
+      font-size: 14px;
+      height: 36px;
+    }
+    @include responsiveh(small_height_screens) {
+      line-height: 18px;
+      font-size: 14px;
+      height: 18px;
+    }
+  }
+  .classify_detail_list_img {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+/* 第四部分*/ 
+.forth_box {
+  position: relative;
+  top:2430px;
+  .img_brand_position {
+    // background-color: $match_color1;
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url(./imgs/img_brand_position.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .title_brand_position_wrap {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+}
+
+/* 带有英文字段的大标题 */ 
+.title_show {
+  margin-top: 30px;
+}
+
+.title_brand_story {
+  color: #fff;
+  .title_show_name {
+    &:after {
+      background: url(./imgs/brand_story.png) no-repeat center;
+    }
+  }
+}
+
+.title_product_display {
+  .title_show_name {
+    &:after {
+      background: url(./imgs/product_display.png) no-repeat center;
+    }
+  }
+}
+
+.title_brand_position {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  .title_show_name {
+    &:after {
+      background: url(./imgs/brand_position.png) no-repeat center;
+    }
+  }
+}
+/* 头部样式 */ 
+.top{
+  // position: absolute;
+ //  top: 0;
+ //  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.main_top_wrap{
+  width: 100%;
+  background-color: $match_color2;
+  .main_top{
+    margin: 0 auto;
+  }
+  .index_btn{
+    display: block;
+    float: left;
+    font-size: 14px;
+    color: $theme_color;
+    text-decoration: none;
+  }
+  .main_top_right{
+    float: right;
+    overflow: hidden;
+    color: #fff;
+    .search_box{
+      position: relative;
+      float: left;
+      height: 24px;
+      box-sizing:border-box;
+      border:1px solid rgba(255,255,255,.5);
+      padding:0 3px;
+      font-size: 0;
+      line-height: 22px;
+      background-color: $match_color2;
+      input[type="text"]{
+        height: 22px;
+        background-color: $match_color2;
+        border:0 none;
+        font-size: 12px;
+        line-height: 22px;
+        color: #fff;
+      }
+      .ico_search{
+        position: absolute;
+        right: 5px;
+        top:50%;
+        transform: translateY(-50%);
+        height: 14px;
+        width: 14px;
+        background: url(./imgs/ico_search.png) no-repeat center;
+        cursor: pointer;
+      }
+    }
+  }
+  .main_top_right_list{
+    float: right;
+    &>a{
+      display: inline-block;
+      margin-left:32px;
+      font-size: 14px;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+.main_nav_wrap{
+  width: 100%;
+  box-sizing:border-box;
+  background-color: $match_color1;
+  .main_nav{
+    margin: 0 auto;
+  }
+  .top_title{
+    display: block;
+    margin: 0 auto;
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+  .nav_list{
+    &>li{
+      float: left;
+    }
+    .list_name{
+      display: block;
+      font-size: 16px;
+      line-height: 60px;
+      text-align: center;
+      color: #fff;
+      &:hover{
+        color: $theme_color;
+        text-decoration: none;
+      }
+      @include responsive(wide_screens) {
+        font-size: 16px;
+        line-height: 50px;
+      }
+      @include responsive(medium_screens) {
+        font-size: 14px;
+        line-height: 40px;
+      }
+      @include responsive(small_screens) {
+        font-size: 12px;
+        line-height: 30px;
+      }
+      @include responsiveh(medium_height_screens) {
+        font-size: 14px;
+      }
+      @include responsiveh(small_height_screens) {
+        font-size: 14px;
+      }
+    }
+    .list_active {
+      color: $theme_color;
+    }
+  }
+  .classify_list{
+    position: relative;
+    z-index: 100;
+  }
+  .classify_list:hover{
+    .list_name{
+      color: $theme_color;
+      text-decoration: none;
+    }
+    .secondary_list{
+      display: block;
+    }
+  }
+  .secondary_list{
+    position: absolute;
+    top:60px;
+    left:50%;
+    transform: translateX(-50%);
+    display: none;
+    width: 140px;
+    padding:10px 0;
+    background-color: #fff;
+    @include responsive(wide_screens) {
+      top:50px;
+    }
+    @include responsive(medium_screens) {
+      top:40px;
+    }
+    @include responsive(small_screens) {
+      top:30px;
+    }
+    &>li{
+      height: 38px;
+      line-height: 38px;
+      padding-left: 30px;
+      overflow: hidden;
+    }
+    a{
+      font-size: 16px;
+      line-height: 38px;
+      text-decoration: none;
+      color: $subhead_color1;
+      @include responsive(wide_screens) {
+        font-size: 16px;
+      }
+      @include responsive(medium_screens) {
+        font-size: 14px;
+      }
+      @include responsive(small_screens) {
+        font-size: 12px;
+      }
+    }
+    a:hover,
+    .current{
+      color: $theme_color;
+    }
+    &:before{
+      content: "";
+      display: block;
+      position: absolute;
+      left:50%;
+      top:-15px;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 15px solid #fff;
+    }
+  }
+}
+
+
+/* 底部样式 */
+.foot{
+  width: 100%;
+  background-color: $match_color1;
+  .title_foot{
+    width: 100%;
+    padding-top: 15px;
+    border-bottom:1px solid $border_color;
+    img{
+      display: block;
+      margin:0 auto;
+    }
+  }
+  .main_foot{
+    position: relative;
+    margin:0 auto;
+    padding-bottom: 35px;
+    color: #fff;
+    h3{
+      margin-top: 30px;
+      font-size: 18px;
+      line-height: 40px;
+      text-align: left;
+      font-weight: 400;
+      @include responsive(wide_screens) {
+        font-size: 16px;
+        line-height: 36px;
+      }
+      @include responsive(medium_screens) {
+        font-size: 14px;
+        line-height: 28px;
+      }
+      @include responsive(small_screens) {
+        font-size: 12px;
+        line-height: 24px;
+      }
+    }
+  }
+  .lists{
+    float: left;
+    width: 25%;
+    overflow: hidden;
+    a{
+      display: block;
+      font-size: 16px;
+      line-height: 46px;
+      color: #fff;
+    }
+    a:hover{
+      color: $hover_color;
+    }
+  }
+}
+
+.phone_content{
+  float: left;
+  width: 25%;
+  .phone{
+    width: 180px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    color: $theme_color;
+  }
+  .service_btn{
+    position: relative;
+    display: block;
+    height: 42px;
+    width: 160px;
+    padding-left: 20px;
+    margin-top: 20px;
+    border:0 none;
+    outline: none;
+    font-size: 16px;
+    line-height: 42px;
+    text-align: center;
+    background-color: $theme_color;
+    color: #fff;
+    cursor: pointer;
+    &:before{
+      content: "";
+      position: absolute;
+      left:13px;
+      top:10px;
+      display: block;
+      height: 20px;
+      width: 20px;
+      background-image: url(./imgs/ico_message.png);
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+.qr_content{
+  float: right;
+  font-size: 14px;
+  text-align: center;
+  .img_box{
+    height: 110px;
+    width: 110px;
+    margin-top:40px;
+    padding:5px;
+    background-color: #fff;
+    img{
+      display: block;
+      width: 110px;
+      height: 110px;
+    }
+  }
+  .name_one{
+    line-height: 30px;
+  }
+  .name_two{
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.goRight-enter-active, .goRight-leave-active {
+  transition: all  .5s;
+}
+.goRight-enter, .goRight-leave-active {
+   transform: translateX(400px);
+}
+
+.goLeft-enter-active, .goLeft-leave-active {
+  transition: all  .5s .5s;
+}
+.goLeft-enter, .goLeft-leave-active {
+   transform: translateX(50px);
+}

@@ -1,0 +1,532 @@
+@import "../../modules/sass/variable.scss";
+@import "../../modules/css/reset/reset.css";
+@import "../../modules/icon/style.css";
+[v-cloak] {
+    display: none;
+}
+
+a:hover {
+    color: $hover_color;
+}
+body{
+    font-family:Arial,'Microsoft YaHei';
+}
+
+
+/*
+**  主内容1200px宽度
+*/
+
+.main_content_box {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.product_cart_wrap {
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.ta_c {
+    text-align: center;
+}
+
+.ta_l {
+    text-align: left;
+}
+
+.ta_r {
+    text-align: right;
+}
+
+.clearfix {
+    clear: both
+}
+
+.clearfix:after {
+    display: block;
+    content: ".";
+    clear: both;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.theme_color {
+    color: $theme_color;
+}
+
+/* 
+* 全屏banner图
+* 页面传图片路劲还有高度
+*/ 
+.img_banner{
+  display: block;
+  width: 100%;
+  min-width: 1200px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+/* 标题导航 */ 
+.title_guide{
+  position: relative;
+  padding:18px 0;
+  line-height: 30px;
+  .title{
+    display: inline-block;
+    position: relative;
+    padding-left: 17px;
+    font-size: 24px;
+    &:before{
+      position: absolute;
+      left:0;
+      top:0;
+      content: "";
+      height: 30px;
+      width: 6px;
+      background-color: $theme_color;
+    }
+  }
+  .subhead_title{
+    position: relative;
+    padding-left: 17px;
+    margin-left: 10px;
+    font-size: 24px;
+    &:before{
+      position: absolute;
+      left:0;
+      top:50%;
+      transform: translateY(-50%);
+      content: "";
+      height: 0;
+      width: 0;
+      border-top:6px solid transparent;
+      border-bottom:6px solid transparent;
+      border-left:10px solid $theme_color;
+    }
+  }
+  /* 搜索页面特有的 */ 
+  .search_title{
+    margin-left:20px;
+    font-size: 24px;
+    i{
+      color: $theme_color;
+    }
+  }
+  /* 登录注册页面特有的 */ 
+  .login_title{
+    float: right;
+    line-height: 30px;
+    font-size: 18px;
+    .login_btn{
+      color: $hover_color;
+    }
+  }
+  /* 我的资料特有的--退出按钮 */ 
+  .exit_button{
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    height: 38px;
+    width: 98px;
+    border:1px solid $border_color;
+    font-size: 20px;
+    line-height: 38px;
+    text-align: center;
+    color: $subhead_color2;
+    cursor: pointer;
+  }
+}
+
+/* 带有英文字段的大标题*/ 
+.title_show{
+  display: inline-block;
+  padding:10px 0;
+  font-size: 30px;
+  .title_show_name{
+    position: relative;
+    margin-right: 10px;
+    &:after{
+      content: "";
+      position: absolute;
+      right:-160px;
+      bottom: -10px;
+      height: 32px;
+      width: 152px;
+    }
+  }
+}
+
+/* 取消确认框 */ 
+.box_mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .6);
+}
+.confirmation_box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 300px;
+  box-sizing:border-box;
+  padding: 55px 0;
+  border-radius: 10px;
+  background-color: #fff;
+  .confirmation_box_text{
+    width: 85%;
+    margin:30px auto 28px;
+    height:104px;
+    overflow: hidden;
+    font-size: 22px;
+    line-height: 52px;
+    text-align: center;
+    color: $subhead_color1;
+  }
+  .confirmation_box_btns{
+    text-align: center;
+    font-size: 0;
+    span{
+      display: inline-block;
+      margin:0 40px;
+      height: 38px;
+      width: 98px;
+      font-size: 20px;
+      line-height: 38px;
+      cursor: pointer;
+    }
+  }
+  .cancle_btn{
+    border:1px solid $border_color;
+    background-color: #fff;
+    color: $subhead_color3;
+  }
+  .confirm_btn{
+    border:1px solid $theme_color;
+    background-color: $theme_color;
+    color: #fff;
+    &:hover{
+      background-color: #c0a76c;
+    }
+
+  }
+  .delete_btn{
+    display: block;
+    position: absolute;
+    right:10px;
+    top:10px;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    background: url(../../modules/imgs/delete_btn.png) no-repeat center;
+  }
+}
+
+/* slide左右按钮样式 */ 
+.slide_wrap{
+  position: relative;
+  width: 1200px;
+  margin-top:60px;
+  overflow: hidden;
+  .slide_btn{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    height: 50px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 2;
+    background-color: $subhead_color3;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:hover{
+      background-color: $theme_color;
+    }
+  }
+  .disabled{
+    background-color: $disable_color;
+    &:hover{
+      background-color: $disable_color;
+      cursor: default;
+    }
+  }
+  .left_btn{
+    left:0;
+    background-image: url(../../modules/imgs/left_btn.png);
+  }
+  .right_btn{
+    right:0;
+    background-image: url(../../modules/imgs/right_btn.png);
+  }
+}
+
+/* 
+*设计师频道模块共有的样式 
+*每个板块的头部
+*/ 
+.design_case_title{
+  font-size: 0;
+  .name{
+    display: inline-block;
+    height: 80px;
+    width: 300px;
+    font-size: 30px;
+    line-height: 80px;
+    text-align: center;
+    color: #fff;
+    background-color: $match_color1;
+  }
+  .text{
+    display: inline-block;
+    margin: 38px 0 0 10px;
+    font-size: 24px;
+    line-height: 42px;
+    vertical-align: top;
+  }
+}
+
+
+/* 图标公用的样式 */
+.icon {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+/* 弹窗样式 */
+.tips_pop_shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    .tips_pop_box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 400px;
+    }
+}
+
+
+/* 操作提醒 */
+.messageDig {
+    width: 40%;
+    position: fixed;
+    background: rgba(0, 0, 0, .6);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 30px;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    z-index: 99999;
+}
+
+/* 按钮 */ 
+button.button{
+  height: 52px;
+  width: 200px;
+  color: #fff;
+  line-height: 52px;
+  font-size: 24px;
+  cursor: pointer;
+}
+button.do{
+  background-color: $theme_color;
+  &:hover{
+    background-color: #c0a76c;
+  }
+}
+button.undo{
+  background-color: $disable_color;
+}
+/* 输入框 */
+input[type="text"]{
+  height: 42px;
+  line-height: 42px;
+}
+
+/* 去掉上下箭头 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0; 
+}
+input[type="number"]{-moz-appearance:textfield;} 
+
+/* 选择框样式 */
+input[type="radio"],
+input[type="checkbox"] {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-top: -3px;
+    -webkit-appearance: none;
+    outline: none;
+    border: 0 none;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+input[type="radio"] {
+    background: url(../../modules/imgs/radio_nor.png) no-repeat center;
+}
+input[type="checkbox"] {
+    background: url(../../modules/imgs/checkbox_nor.png) no-repeat center;
+}
+
+input[type="radio"]:checked:after,
+input[type="radio"].checked:after,
+input[type="checkbox"]:checked:after,
+input[type="checkbox"].checked:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    height: 24px;
+    width: 24px;
+    transform: translate(-50%, -50%);
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+}
+
+input[type="radio"]:checked:after,
+input[type="radio"].checked:after {
+    background: url(../../modules/imgs/radio_sel.png) no-repeat center;
+}
+
+input[type="checkbox"]:checked:after,
+input[type="checkbox"].checked:after {
+    background: url(../../modules/imgs/checkbox_sel.png) no-repeat center;
+}
+input[type="checkbox"]:disabled {
+    cursor: default;
+    width: 24px;
+    height: 24px;
+    margin-top: -3px;
+    -webkit-appearance: none;
+    outline: none;
+    border: 0 none;
+    text-align: center;
+    vertical-align: middle;
+    background: url(../../modules/imgs/checkbox_disable.png) no-repeat center;
+}
+
+
+
+/*
+**文字单行超出隐藏
+*/
+
+%overText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/*
+**内容垂直居中
+*/
+
+%verticalCenter {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/*
+**%  @extend %xxx;
+*/
+
+%button {
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+    border: 0 none;
+    outline: none;
+}
+/*
+* 媒体查询
+* @include 引用
+*/ 
+@mixin responsive($width) { 
+  @if $width == wide_screens { 
+    @media only screen and (max-width: $width_large) { @content; }
+  } 
+  @else if $width == medium_screens { 
+    @media only screen and (max-width: $width_medium) { @content; } 
+  } 
+  @else if $width == small_screens { 
+    @media only screen and (max-width: $width_small) { @content; } 
+  } 
+}
+
+@mixin responsiveh($height){
+  @if $height == medium_height_screens { 
+    @media only screen and (max-height: $height_medium) { @content; } 
+  } 
+  @else if $height == small_height_screens { 
+    @media only screen and (max-height: $height_small) { @content; } 
+  } 
+}
+
+
+
+
+/*
+**mixin @include xxx()
+*/
+
+@mixin button($width:120px, $bgc:#fff, $borderRadius:4px) {
+    width: $width;
+    background-color: $bgc;
+    border-radius: $borderRadius;
+}
+
+
+/*
+**mixin banner 背景
+*/
+
+@mixin banner($height, $bgi) {
+    height: $height;
+    width: 100%;
+    min-width: 1200px;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-image: $bgi;
+}
