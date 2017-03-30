@@ -1,4 +1,4 @@
-import './fullPageRoll.scss'
+import './vwvh.scss'
 
 import Slide from 'components/slide/slide.vue'
 // import mixin from 'js/mixin.js'
@@ -92,8 +92,11 @@ function nextElem(elem) {
 
 function getStyle(obj, arr) {
   if(obj.currentStyle){
+
+      
       return obj.currentStyle[arr];    //针对ie
   } else {
+    
       return document.defaultView.getComputedStyle(obj, null)[arr]; 
   }
 }

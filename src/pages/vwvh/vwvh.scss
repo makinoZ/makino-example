@@ -10,6 +10,7 @@ html,body {
   position: relative;
   // transition:top .5s .2s;
   // height: 2000%;
+  top:0;
 }
 .index_foot {
   position: absolute;
@@ -39,46 +40,52 @@ html,body {
 .second_box {
   position: relative;
   background-color: #fff;
+  height: 100vh;
   .yellow_bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    height: 59vh;
     background-color: $theme_color;
   }
   .second_box_main {
     position: relative;
     margin: 0 auto;
+    width: 111vh;
   }
   .brand_story_text {
     position: relative;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 1.85vh;
     z-index: 10;
-    font-size: 20px;
-    line-height: 34px;
+    font-size: 1.85vh;
+    line-height: 3.14vh;
     color: #fff;
     overflow: hidden;
-    @include responsive(wide_screens) {
-      font-size: 18px;
-      line-height: 26px;
-    }
-    @include responsive(medium_screens) {
-      font-size: 16px;
-      line-height: 24px;
-    }
-    @include responsive(small_screens) {
-      font-size: 14px;
-      line-height: 20px;
-    }
-    @include responsiveh(medium_height_screens) {
-      font-size: 16px;
-      line-height: 24px;
-    }
-    @include responsiveh(small_height_screens) {
-      font-size: 14px;
-      line-height: 20px;
-    }
+    min-width: 111vh;
+    height: 24vh;
+    margin-bottom: 6vh;
+    // @include responsive(wide_screens) {
+    //   font-size: 18px;
+    //   line-height: 26px;
+    // }
+    // @include responsive(medium_screens) {
+    //   font-size: 16px;
+    //   line-height: 24px;
+    // }
+    // @include responsive(small_screens) {
+    //   font-size: 14px;
+    //   line-height: 20px;
+    // }
+    // @include responsiveh(medium_height_screens) {
+    //   font-size: 16px;
+    //   line-height: 24px;
+    // }
+    // @include responsiveh(small_height_screens) {
+    //   font-size: 14px;
+    //   line-height: 20px;
+    // }
   }
   .brand_story_text_left {
     float: left;
@@ -87,13 +94,19 @@ html,body {
   }
   .brand_story_text_right {
     float: right;
-    width: 300px;
+    width: 40%;
     text-align: left;
   }
   /* 图片轮播 wrap*/
+  .small_slide_wrap{
+    width: 74vh;
+    overflow: hidden;
+  }
   .brand_story_slide {
     position: relative;
     margin: 0 auto;
+    width: 106vh;
+    height: 55vh;
     .carousel-items {
       right: 10px;
       top: 95%;
@@ -111,69 +124,79 @@ html,body {
     .brand_story_slide_text {
       position: absolute;
       right: 0;
-      top: 0;
+      top: -6.8vh;
       box-sizing: border-box;
       background-color: $match_color2;
       overflow: hidden;
+      height: 46.3vh;
+      width: 46vh;
+      padding:5.6vh;
     }
     .summary_text {
       font-size: 18px;
       line-height: 40px;
       color: #fff;
       overflow: hidden;
-      @include responsive(wide_screens) {
-        font-size: 16px;
-        line-height: 32px;
-      }
-      @include responsive(medium_screens) {
-        font-size: 14px;
-        line-height: 26px;
-      }
-      @include responsiveh(medium_height_screens) {
-        font-size: 16px;
-        line-height: 26px;
-      }
-      @include responsiveh(small_height_screens) {
-        font-size: 14px;
-        line-height: 24px;
-      }
+      height: 25.9vh;
+      font-size: 1.85vh;
+      line-height: 3.14vh;
+      // @include responsive(wide_screens) {
+      //   font-size: 16px;
+      //   line-height: 32px;
+      // }
+      // @include responsive(medium_screens) {
+      //   font-size: 14px;
+      //   line-height: 26px;
+      // }
+      // @include responsiveh(medium_height_screens) {
+      //   font-size: 16px;
+      //   line-height: 26px;
+      // }
+      // @include responsiveh(small_height_screens) {
+      //   font-size: 14px;
+      //   line-height: 24px;
+      // }
     }
     .more_btn {
       position: absolute;
-      height: 40px;
-      width: 120px;
-      font-size: 20px;
-      line-height: 40px;
+      right: 3.7vh;
+      bottom:3.7vh;
+      height: 3.7vh;
+      width: 11.1vh;
+      font-size: 1.85vh;
+      line-height: 3.7vh;
       text-align: center;
       background-color: $theme_color;
       color: $subhead_color1;
       text-decoration: none;
-      @include responsive(wide_screens) {
-        height: 36px;
-        width: 105px;
-        font-size: 16px;
-        line-height: 36px;
-      }
-      @include responsive(medium_screens) {
-        height: 30px;
-        width: 90px;
-        font-size: 14px;
-        line-height: 30px;
-      }
-      @include responsive(small_screens) {
-        height: 24px;
-        width: 75px;
-        font-size: 12px;
-        line-height: 24px;
-      }
+      // @include responsive(wide_screens) {
+      //   height: 36px;
+      //   width: 105px;
+      //   font-size: 16px;
+      //   line-height: 36px;
+      // }
+      // @include responsive(medium_screens) {
+      //   height: 30px;
+      //   width: 90px;
+      //   font-size: 14px;
+      //   line-height: 30px;
+      // }
+      // @include responsive(small_screens) {
+      //   height: 24px;
+      //   width: 75px;
+      //   font-size: 12px;
+      //   line-height: 24px;
+      // }
     }
   }
 }
 /* 第三部分*/ 
 .third_box {
   background-color: #fff;
+  height: 100vh;
   .third_box_main{
     margin:0 auto;
+    width: 113vh;
   }
   /* 5种分类 */
   .classify_content {
@@ -182,11 +205,11 @@ html,body {
       position: relative;
       display: block;
       float: left;
-      margin-right: 20px;
+      height: 25.9vh;
+      width: 20.7vh;
+      margin: 0 0.9vh;
       color: $subhead_color1;
-      &:nth-child(4n){
-        margin-right: 0;
-      }
+      
       img {
         display: block;
         width: 100%;
@@ -201,31 +224,36 @@ html,body {
       left:0;
       width: 100%;
       text-align: center;
-      font-size: 20px;
-      line-height: 54px;
-      @include responsive(wide_screens) {
-        font-size: 18px;
-        line-height: 48px;
-      }
-      @include responsiveh(medium_height_screens) {
-        line-height: 30px;
-        font-size: 16px;
-      }
-      @include responsiveh(small_height_screens) {
-        line-height: 30px;
-        font-size: 14px;
-      }
+      font-size: 1.8vh;
+      line-height: 5.18vh;
+      // @include responsive(wide_screens) {
+      //   font-size: 18px;
+      //   line-height: 48px;
+      // }
+      // @include responsiveh(medium_height_screens) {
+      //   line-height: 30px;
+      //   font-size: 16px;
+      // }
+      // @include responsiveh(small_height_screens) {
+      //   line-height: 30px;
+      //   font-size: 14px;
+      // }
     }
   }
   /* 分类详情列表 */
   .classify_detail_content {
     overflow: hidden;
     text-align: center;
+    height: 55vh;
+    margin-top: 2.6vh;
   }
   .classify_detail_list {
     position: relative;
     display: inline-block;
     background-color: $bg_color;
+    height: 53.7vh;
+    width: 26.3vh;
+    margin-right: 1.8vh;
     &:nth-child(4n) {
       margin-right: 0;
     }
@@ -234,68 +262,71 @@ html,body {
     }
     .check_btn {
       position: absolute;
-      bottom: 20px;
-      left: 20px;
-      height: 28px;
-      width: 98px;
-      line-height: 28px;
+      bottom: 1.85vh;
+      left: 1.85vh;
+      height: 2.5vh;
+      width: 11vh;
+      line-height: 2.5vh;
       text-align: center;
       text-decoration: none;
       color: $subhead_color3;
       border: 1px solid $subhead_color3;
+      font-size: 1.25vh;
       &:hover {
         color: $theme-color;
         border: 1px solid $theme_color;
       }
-      @include responsiveh(medium_height_screens) {
-        height: 24px;
-        width: 90px;
-        line-height: 24px;
-        font-size: 14px;
-      }
-      @include responsiveh(small_height_screens) {
-        height: 20px;
-        width: 80px;
-        font-size: 12px;
-        line-height: 20px;
-      }
+      // @include responsiveh(medium_height_screens) {
+      //   height: 24px;
+      //   width: 90px;
+      //   line-height: 24px;
+      //   font-size: 14px;
+      // }
+      // @include responsiveh(small_height_screens) {
+      //   height: 20px;
+      //   width: 80px;
+      //   font-size: 12px;
+      //   line-height: 20px;
+      // }
     }
   }
   .classify_detail_list_name {
     width: 90%;
     margin: 10px auto 0;
-    line-height: 28px;
-    font-size: 16px;
-    height: 56px;
+    line-height: 2.5vh;
+    font-size: 2.0vh;
+    height: 5.19vh;
     text-align: left;
     overflow: hidden;
-    @include responsive(wide_screens) {
-      line-height: 24px;
-      font-size: 14px;
-      height: 48px;
-    }
-    @include responsive(medium_screens) {
-      line-height: 18px;
-      font-size: 12px;
-      height: 36px;
-    }
-    @include responsive(small_screens) {
-      line-height: 18px;
-      font-size: 14px;
-      height: 18px;
-    }
-    @include responsiveh(medium_height_screens) {
-      line-height: 18px;
-      font-size: 14px;
-      height: 36px;
-    }
-    @include responsiveh(small_height_screens) {
-      line-height: 18px;
-      font-size: 14px;
-      height: 18px;
-    }
+    // @include responsive(wide_screens) {
+    //   line-height: 24px;
+    //   font-size: 14px;
+    //   height: 48px;
+    // }
+    // @include responsive(medium_screens) {
+    //   line-height: 18px;
+    //   font-size: 12px;
+    //   height: 36px;
+    // }
+    // @include responsive(small_screens) {
+    //   line-height: 18px;
+    //   font-size: 14px;
+    //   height: 18px;
+    // }
+    // @include responsiveh(medium_height_screens) {
+    //   line-height: 18px;
+    //   font-size: 14px;
+    //   height: 36px;
+    // }
+    // @include responsiveh(small_height_screens) {
+    //   line-height: 18px;
+    //   font-size: 14px;
+    //   height: 18px;
+    // }
   }
   .classify_detail_list_img {
+    height: 38.9vh;
+    width: 26.3vh;
     img {
       display: block;
       width: 100%;
@@ -306,7 +337,10 @@ html,body {
 /* 第四部分*/ 
 .forth_box {
   position: relative;
+  height: 100vh;
   .img_brand_position {
+    height: 66.8vh;
+    min-width: 111vh;
     // background-color: $match_color1;
     background-repeat: no-repeat;
     background-image: url(./imgs/img_brand_position.png);
@@ -318,12 +352,14 @@ html,body {
     left: 50%;
     top: 0;
     transform: translateX(-50%);
+    min-width: 111vh;
   }
 }
 
 /* 带有英文字段的大标题 */ 
 .title_show {
   margin-top: 30px;
+  font-size: 3vh;
 }
 
 .title_brand_story {
@@ -356,17 +392,21 @@ html,body {
 }
 /* 头部样式 */ 
 .top{
-  // position: absolute;
-  // top: 0;
-  // left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 2;
+  height: 25.9vh;
 }
 .main_top_wrap{
   width: 100%;
+  min-width: 111vh;
+  height: 5.5vh;
   background-color: $match_color2;
   .main_top{
     margin: 0 auto;
+    width: 111vh;
   }
   .index_btn{
     display: block;
@@ -374,14 +414,23 @@ html,body {
     font-size: 14px;
     color: $theme_color;
     text-decoration: none;
+    line-height: 5.5vh;
   }
   .main_top_right{
     float: right;
     overflow: hidden;
     color: #fff;
-    .search_box{
+    .search_box_wrap{
       position: relative;
       float: left;
+      height: 5.5vh;
+      width: 20vh;
+    }
+    .search_box{
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
       height: 24px;
       box-sizing:border-box;
       border:1px solid rgba(255,255,255,.5);
@@ -389,6 +438,7 @@ html,body {
       font-size: 0;
       line-height: 22px;
       background-color: $match_color2;
+      width: 16.7vh;
       input[type="text"]{
         height: 22px;
         background-color: $match_color2;
@@ -396,6 +446,7 @@ html,body {
         font-size: 12px;
         line-height: 22px;
         color: #fff;
+        width: 14.2vh;
       }
       .ico_search{
         position: absolute;
@@ -414,59 +465,68 @@ html,body {
     &>a{
       display: inline-block;
       margin-left:32px;
-      font-size: 14px;
+      font-size: 1.75vh;
       color: #fff;
       text-decoration: none;
+      line-height: 5.5vh;
     }
   }
 }
 .main_nav_wrap{
   width: 100%;
+  min-width: 111vh;
+  padding-top: 3.3vh;
   box-sizing:border-box;
   background-color: $match_color1;
   .main_nav{
     margin: 0 auto;
+    width: 111vh;
   }
   .top_title{
     display: block;
     margin: 0 auto;
+    width: 24.3vh;
+    height: 9.3vh;
     img{
       display: block;
       width: 100%;
+      height: 100%;
     }
   }
   .nav_list{
+    margin-top: 1.48vh;
     &>li{
       float: left;
+      margin: 0 4vh;
     }
     .list_name{
       display: block;
-      font-size: 16px;
-      line-height: 60px;
+      font-size: 2vh;
+      line-height: 7.5vh;
       text-align: center;
       color: #fff;
       &:hover{
         color: $theme_color;
         text-decoration: none;
       }
-      @include responsive(wide_screens) {
-        font-size: 16px;
-        line-height: 50px;
-      }
-      @include responsive(medium_screens) {
-        font-size: 14px;
-        line-height: 40px;
-      }
-      @include responsive(small_screens) {
-        font-size: 12px;
-        line-height: 30px;
-      }
-      @include responsiveh(medium_height_screens) {
-        font-size: 14px;
-      }
-      @include responsiveh(small_height_screens) {
-        font-size: 14px;
-      }
+      // @include responsive(wide_screens) {
+      //   font-size: 16px;
+      //   line-height: 50px;
+      // }
+      // @include responsive(medium_screens) {
+      //   font-size: 14px;
+      //   line-height: 40px;
+      // }
+      // @include responsive(small_screens) {
+      //   font-size: 12px;
+      //   line-height: 30px;
+      // }
+      // @include responsiveh(medium_height_screens) {
+      //   font-size: 14px;
+      // }
+      // @include responsiveh(small_height_screens) {
+      //   font-size: 14px;
+      // }
     }
   }
   .classify_list{
@@ -484,22 +544,22 @@ html,body {
   }
   .secondary_list{
     position: absolute;
-    top:60px;
+    top:7.5vh;
     left:50%;
     transform: translateX(-50%);
     display: none;
     width: 140px;
     padding:10px 0;
     background-color: #fff;
-    @include responsive(wide_screens) {
-      top:50px;
-    }
-    @include responsive(medium_screens) {
-      top:40px;
-    }
-    @include responsive(small_screens) {
-      top:30px;
-    }
+    // @include responsive(wide_screens) {
+    //   top:50px;
+    // }
+    // @include responsive(medium_screens) {
+    //   top:40px;
+    // }
+    // @include responsive(small_screens) {
+    //   top:30px;
+    // }
     &>li{
       height: 38px;
       line-height: 38px;
@@ -507,19 +567,19 @@ html,body {
       overflow: hidden;
     }
     a{
-      font-size: 16px;
+      font-size: 2vh;
       line-height: 38px;
       text-decoration: none;
       color: $subhead_color1;
-      @include responsive(wide_screens) {
-        font-size: 16px;
-      }
-      @include responsive(medium_screens) {
-        font-size: 14px;
-      }
-      @include responsive(small_screens) {
-        font-size: 12px;
-      }
+      // @include responsive(wide_screens) {
+      //   font-size: 16px;
+      // }
+      // @include responsive(medium_screens) {
+      //   font-size: 14px;
+      // }
+      // @include responsive(small_screens) {
+      //   font-size: 12px;
+      // }
     }
     a:hover,
     .current{
@@ -545,14 +605,19 @@ html,body {
 /* 底部样式 */
 .foot{
   width: 100%;
+  min-width: 111vh;
   background-color: $match_color1;
   .title_foot{
     width: 100%;
+    min-width: 111vh;
+    height: 6vh;
     padding-top: 15px;
     border-bottom:1px solid $border_color;
     img{
       display: block;
       margin:0 auto;
+      height: 4.6vh;
+      width: 12.2vh;
     }
   }
   .main_foot{
@@ -560,6 +625,7 @@ html,body {
     margin:0 auto;
     padding-bottom: 35px;
     color: #fff;
+    width: 111vh;
     h3{
       margin-top: 30px;
       font-size: 18px;

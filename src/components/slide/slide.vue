@@ -5,11 +5,16 @@
     tag="ul" 
     class='slideUl' 
     :style="{'height':height+'px'}">
-      <li v-show='index === currentIndex' v-for='(slide,index) in slideList' :key="index" :style="{'width':newWidth}">
-        <a :href="slide.clickUrl?slide.clickUrl:'javascript:;'">
+      <li v-show='index === currentIndex' v-for='(slide,index) in slideList' :key="index" :style="{'width':newWidth,'height':height+'px'}">
+        <!-- <a :href="slide.clickUrl?slide.clickUrl:'javascript:;'">
           <img :src="slide.image"  @mouseenter='stop' @mouseleave='go' :width="width" :height="height" v-if="play !== 'false'">
           <img :src="slide.image" :width="width" :height="height" v-if="play === 'false'">
+        </a> -->
+        <a class="img" :href="slide.clickUrl?slide.clickUrl:'javascript:;'"  :style="{backgroundImage:'url('+slide.image+')','height':height+'px'}"  @mouseenter='stop' @mouseleave='go' :width="width" :height="height" v-if="play !== 'false'">
         </a>
+        <a class="img" :href="slide.clickUrl?slide.clickUrl:'javascript:;'" :style="{backgroundImage:'url('+slide.image+')','height':height+'px'}"  @mouseenter='stop' @mouseleave='go' :width="width" :height="height" v-if="play !== 'false'">
+        </a>
+
       </li>
     </transition-group>   
     <div class="carousel-items">

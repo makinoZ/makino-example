@@ -1,0 +1,314 @@
+@import "../../modules/sass/common.scss";
+body{
+	background-color: #F6F7A7;
+}
+.cat_box_wrap{
+	position: relative;
+	top: 50px;
+}
+/* 盒子 */
+.cat_box{
+	width: 400px;
+	margin:0 auto;
+	&:hover{
+		.ears_left{
+			transform: rotate(0);
+			border-bottom-left-radius: 85px;
+		}
+		.ears_right{
+			transform: rotate(0);
+			border-bottom-right-radius: 85px;
+		}
+		.mouse_left,.mouse_right{
+			border-radius: 50%;
+		}
+		.eyes_left .eye_bottom_border{
+			top: 30px;
+		}
+		.eyes_right .eye_bottom_border{
+			top: 30px;
+		}
+		.eyeball{
+			top:2px;
+			width: 34px;
+		}
+		.blusher{
+			opacity: 1;
+		}
+	}
+}
+/* 头部 */ 
+.head{
+	position: relative;
+	width: 400px;
+	height: 340px;
+	border: 2px solid #2e2e2e;
+	background-color: #F6F7F2;
+	border-top-left-radius: 190px;
+	border-top-right-radius: 190px;
+	border-bottom-left-radius: 130px;
+	border-bottom-right-radius: 130px;
+	overflow: hidden;
+	z-index: 2;
+	.head_figure{
+		height: 160px;
+		width: 180px;
+		margin: 0 auto;
+		overflow: hidden;
+		border-bottom-left-radius: 50%;
+		border-bottom-right-radius: 50%;
+		.left{
+			height: 160px;
+			width: 90px;
+			float: left;
+			background-color: #F0AC6B;
+		}
+		.right{
+			height: 160px;
+			width: 90px;
+			float: left;
+			background-color: #8D8D8D;
+		}
+	}
+}
+/* 耳朵 */ 
+.ears{
+	position: absolute;
+	top: -5px;
+	left:50%;
+	transform: translateX(-50%);
+	width: 400px;
+	z-index: 1;
+	.ears_left{
+		position: absolute;
+		left:-10px;
+		height: 180px;
+		width: 160px;
+		background-color: #F6F7F2;
+		border: 2px solid #2e2e2e;
+		border-radius: 10px;
+		border-top-right-radius: 130px;
+		border-bottom-left-radius: 80px;
+		transform: rotate(-15deg);
+		transition:transform 1s,left 1s;
+	}
+	.ears_right{
+		position: absolute;
+		right:-10px;
+		height: 180px;
+		width: 160px;
+		background-color: #F6F7F2;
+		border: 2px solid #2e2e2e; 
+		border-radius: 10px;
+		border-top-left-radius: 130px;
+		border-bottom-right-radius: 80px;
+		transform: rotate(15deg);
+		transition:transform 1s,left 1s;
+	}
+}
+/* 眼睛 */ 
+.eyes{
+	position: absolute;
+	height: 60px;
+	width: 300px;
+	top: 200px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 3;
+	overflow: hidden;
+	.eyeball{
+		position: absolute;
+		top: 2px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #2e2e2e;
+		height: 60px;
+		width: 30px;
+		transition: all 1s;
+	}
+	.eyes_left{
+		position: absolute;
+		left: 0;
+		top: 0;
+		.eye_top_border{
+			width: 100px;
+			height: 100px;
+			border: 2px solid #2e2e2e;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		.eye_bottom_border{
+			position: absolute;
+			top: 50px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 200px;
+			height: 120px;
+			border-top: 2px solid #2e2e2e;
+			border-left: 2px solid #2e2e2e;
+			border-radius: 50%;
+			background-color: #F6F7F2;
+			z-index: 4;
+			transition: all 1s;
+		}
+		
+	}
+	.blusher{
+		position: absolute;
+		left:50%;
+		top: 2px;
+		transform: translateX(-50%);
+		display: block;
+		height: 26px;
+		width: 70px;
+		border-radius: 50%;
+		background-color: pink;
+		opacity: 0;
+		transition: opacity 1s .3s;
+	}
+	.eyes_right{
+		position: absolute;
+		right: 0;
+		top: 0;
+		.eye_top_border{
+			width: 100px;
+			height: 100px;
+			box-sizing:border-box;
+			border: 2px solid #2e2e2e;
+			border-radius: 50%;
+		}
+		.eye_bottom_border{
+			position: absolute;
+			top: 50px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 200px;
+			height: 120px;
+			border: 2px solid #2e2e2e;
+			border-radius: 50%;
+			background-color: #F6F7F2;
+			z-index: 4;
+			transition: all 1s;
+		}
+	}
+}
+/* 脸 */ 
+.face{
+	position: absolute;
+	height: 100px;
+	width: 370px;
+	top: 180px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 6;
+	overflow: hidden;
+	padding-top: 15px;
+	.face_left{
+		float: left;
+	}
+	.face_right{
+		float: right;
+		transform: rotateY(180deg) ;
+	}
+	span{
+		display: block;
+	}
+	.one{
+		margin-left: 8px;
+		width: 30px;
+		height: 10px;
+		border-top: 6px solid red;
+		border-radius: 20% 80% 10% 10%;
+		transform: rotate(20deg);
+	}
+	.two{
+		margin-left: 12px;
+		width: 20px;
+		height: 6px;
+		background-color: red;
+		border-radius: 50%;
+		transform: rotate(20deg);
+	}
+	.three{
+		width: 35px;
+		height: 10px;
+		border-bottom: 4px solid red;
+		border-radius: 10% 0 80% 20%;
+		transform: rotate(20deg);
+	}
+	.four{
+		margin-left: 16px;
+		margin-top: 16px;
+		width: 28px;
+		height: 20px;
+		border-bottom: 4px solid red;
+		border-radius: 0 0 80% 30%;
+		transform: rotate(25deg);
+	}
+	.five{
+		margin-left: 30px;
+		margin-top: -10px;
+		width: 23px;
+		height: 15px;
+		border-bottom: 3px solid red;
+		border-radius: 0 0 80% 80%;
+		transform: rotate(-20deg);
+	}
+}
+/* 鼻子 */ 
+.nose_box{
+	position: absolute;
+	left: 50%;
+	top: 260px;
+	transform: translateX(-50%);
+	width: 30px;
+	height: 15px;
+	overflow: hidden;
+	z-index: 4;
+	.nose{
+		position: absolute;
+		top: -32px;
+		left:50%;
+		transform: translateX(-50%);
+		height: 40px;
+		width: 40px;
+		background-color: #2e2e2e;
+		border-radius: 50%;
+	}
+}
+/* 嘴巴 */ 
+.mouse{
+	position: absolute;
+	left: 50%;
+	top: 262px;
+	transform: translateX(-50%);
+	height: 30px;
+	width: 104px;
+	overflow: hidden;
+	z-index: 6;
+	.mouse_left{
+		position: absolute;
+		left:0;
+		bottom:0;
+		height: 50px;
+		width: 50px;
+		border-bottom: 4px solid #2e2e2e;
+		border-right: 4px solid #2e2e2e;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 25px;
+		transition:all 1s;
+	}
+	.mouse_right{
+		position: absolute;
+		right:0;
+		bottom:0;
+		height: 50px;
+		width: 50px;
+		border-bottom: 4px solid #2e2e2e;
+		border-left: 4px solid #2e2e2e;
+		border-bottom-left-radius: 25px;
+		border-bottom-right-radius: 10px;
+		transition:all 1s;
+
+	}
+}

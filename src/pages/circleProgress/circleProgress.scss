@@ -1,0 +1,83 @@
+@import "../../modules/sass/common.scss";
+.box_one{
+	margin: 100px auto 0;
+	height: 160px;
+	width: 160px;
+	border-left:20px solid red;
+	border-top:20px solid red;
+	border-radius: 50%;
+	transform: rotate(-30deg);
+}
+
+/* 圆形进度条*/ 
+.circle_progress{
+	position: relative;
+	height: 200px;
+	width: 200px;
+	margin: 100px auto 0;
+	.circle_progress_wrapper{
+		position: absolute;
+		top: 0;
+		width: 100px;
+		height: 200px;
+		overflow: hidden;
+	}
+	.left_wrapper{
+		left: 0;
+	}
+	.right_wrapper{
+		right: 1px;
+	}
+	.semi_cicle{
+		position: absolute;
+		top: 0;
+		height: 160px;
+		width: 160px;
+		border: 20px solid transparent;
+		border-radius: 50%;
+		// 顺时针旋转45°
+		transform: rotate(45deg);
+	}
+	.left_semi_cicle{
+		left: 0;
+		border-left: 20px solid green;
+		border-bottom: 20px solid green;
+		-webkit-animation: circleProgressLoad_left 3s linear infinite;
+	}
+	.right_semi_cicle{
+		right:0;
+		border-right: 20px solid green;
+		border-top: 20px solid green;
+		// 3s延迟，无限次数
+		-webkit-animation: circleProgressLoad_right 3s linear infinite;
+	}
+	// 先让右半圆弧旋转180度
+	@-webkit-keyframes circleProgressLoad_right {
+		0%{
+			transform: rotate(45deg);
+		}
+		50%{
+			transform: rotate(225deg);
+		}
+		100%{
+			transform: rotate(225deg);
+		}
+	}
+	// 再让左半圆弧旋转180度
+	@-webkit-keyframes circleProgressLoad_left {
+		0%{
+			transform: rotate(45deg);
+		}
+		50%{
+			transform: rotate(45deg);
+		}
+		100%{
+			transform: rotate(225deg);
+		}
+	}
+}
+
+/* 条形进度条 */
+.linear_progress{
+	
+}

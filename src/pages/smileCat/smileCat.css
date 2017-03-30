@@ -1,0 +1,40 @@
+/*
+Error: Invalid GBK character "\xE7"
+        on line 9 of G:\FEgit\makinoExample\makino-example\src\pages\smileCat\smileCat.scss
+
+4: }
+5: .cat_box_wrap{
+6: 	position: relative;
+7: 	top: 50px;
+8: }
+9: /* 盒子 *\/
+10: .cat_box{
+11: 	width: 400px;
+12: 	margin:0 auto;
+13: 	&:hover{
+14: 		.ears_left{
+
+Backtrace:
+G:\FEgit\makinoExample\makino-example\src\pages\smileCat\smileCat.scss:9
+H:/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1323:in `rescue in block in find_encoding_error'
+H:/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1320:in `block in find_encoding_error'
+H:/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `each'
+H:/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `each_with_index'
+H:/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `find_encoding_error'
+H:/Koala/rubygems/gems/sass-3.4.9/lib/sass/util.rb:896:in `check_sass_encoding'
+H:/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:423:in `check_encoding!'
+H:/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:379:in `_to_tree'
+H:/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+H:/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
+H:/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:396:in `run'
+H:/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+H:/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+H:/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+H:/Koala/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+H:/Koala/bin/sass:18:in `load'
+H:/Koala/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid GBK character \"\xE7\"\A         on line 9 of G:\FEgit\makinoExample\makino-example\src\pages\smileCat\smileCat.scss\A \A 4: }\A 5: .cat_box_wrap{\A 6: 	position: relative;\A 7: 	top: 50px;\A 8: }\A 9: /* 盒子 */\A 10: .cat_box{\A 11: 	width: 400px;\A 12: 	margin:0 auto;\A 13: 	&:hover{\A 14: 		.ears_left{"; }
