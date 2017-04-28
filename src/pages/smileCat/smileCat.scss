@@ -13,11 +13,13 @@ body{
 	&:hover{
 		.ears_left{
 			transform: rotate(0);
-			border-bottom-left-radius: 85px;
+			border-bottom-left-radius: 90px;
+			left: 0;
 		}
 		.ears_right{
 			transform: rotate(0);
-			border-bottom-right-radius: 85px;
+			border-bottom-right-radius: 90px;
+			right: 0;
 		}
 		.mouse_left,.mouse_right{
 			border-radius: 50%;

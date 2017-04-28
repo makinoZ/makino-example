@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>六边形图片网格布局</title>
+</head>
+<body>
+	<div id="body" class="main_content_box">
+		<!-- 利用三层div来想换rotate而成 -->
+		<h2 class="title">利用三层div来想换rotate而成</h2>
+		<ul class="box1 clearfix">
+			<li class="hexagon_list_wrap" v-for="(list,index) in 10">
+				<a class="hexagon_list" href="">
+					<div class="hexagon_list_content">
+						<img src="./imgs/1.jpg" alt="">
+						<p class="text">123</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<!-- 利用transform:skew六角形网格布局 -->
+		<h2 class="title">利用transform:skew拉伸 六角形网格布局</h2>
+		<ul class="box3 clearfix">
+			<li class="hexagon_list_wrap" v-for="(list,index) in 4">
+				<a class="hexagon_list" href="">
+					<img src="./imgs/3.jpg" alt="">
+					<p>123</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

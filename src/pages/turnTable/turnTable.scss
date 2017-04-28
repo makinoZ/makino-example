@@ -1,0 +1,14 @@
+@import "../../modules/sass/common.scss";
+
+.turn_table_box{
+	position: relative;
+	height: 300px;
+	width: 300px;
+	margin:100px auto 100px;
+	.turnplatw_btn{
+		position: absolute;
+		left:50%;
+		top:50%;
+		transform: translate(-50%,-50%);
+	}
+}

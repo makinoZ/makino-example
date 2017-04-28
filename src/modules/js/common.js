@@ -1,5 +1,6 @@
 // import Vue from 'vue'
 // import VueResource from 'vue-resource'
+Vue.use(ElementUI)
 Vue.use(VueResource)
 Vue.http.options.emulateJSON = true;
 Vue.config.devtools = true

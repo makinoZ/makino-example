@@ -1,0 +1,35 @@
+@import "../../modules/sass/common.scss";
+
+.text_wrapping_box{
+	width: 80vh;
+	margin:10vh auto 0;
+	border:1px solid $border_color;
+	.left{
+		// margin: 0 15px 15px 0;
+		// float: left;
+		height: 40vh;
+		width: 40vh;
+		float: right;
+		// background: black url(./imgs/img.jpg) center top no-repeat;
+		// background-size: cover;
+		// shape
+		// inset(top,right,bottom,left round 左上 右上 右下 左下 )
+		// shape-outside: inset(10px 20px 10% 0 round 20px 20px 50px 50px);
+
+		// circle() ellipse() 不允许负值  
+		// closest-side 从圆心到靠近边缘的最短距离作为半径
+		// farthest-side 从圆心到靠近边缘的最短距离作为半径
+		// at 后面是圆心（x,y）
+		// shape-outside: circle(closest-side at 100px 200px);
+
+		// polygon() 多边形函数  最少三个值
+		// shape-outside: polygon(0 0, 100% 0, 100% 100%,30% 100%);
+		// shape-margin: 20px;
+		// -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%,30% 100%);
+		shape-outside: url(./imgs/img1.png);
+		shape-image-threshold: 0.5;
+	}
+	.right{
+		width: 80vh;
+	}
+}
