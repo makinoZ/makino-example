@@ -1,0 +1,69 @@
+@import "../../modules/sass/common.scss";
+
+.main_content_box{
+	margin-top: 20px;
+}
+.preface{
+	line-height: 50px;
+	color: pink;
+}
+/* float */ 
+// .masonry_layout_list{
+//	  overflow: hidden;
+// 	li{
+//	   float: left;
+//	   width: 220px;
+//	   margin: 0 10px;
+// 	}
+// 	img{
+// 		display: block;
+// 		width: 100%;
+// 	}
+// }
+
+/* inline-block */ 
+// .masonry_layout_list{
+//  font-size: 0;
+// 	li{
+//	    display: inline-block;
+//      width: 220px;
+//      margin:0 10px;
+// 		font-size: 14px;
+//      vertical-align: top;
+// 	}
+// 	img{
+// 		display: block;
+// 		width: 100%;
+// 	}
+// }
+
+/* multi-columns*/ 
+// .masonry_layout_list{//column实现文本多列排列
+// 	column-count: 5; //设置列数 如果要做响应式的话，只要相应的改变这个列数就行
+// 	column-gap: 0; //设置列间距
+// 	li{//实现堆栈之间的间距
+// 		break-inside:avoid;  //控制文本块分解成单独的列，以免项目列表的内容跨列，破坏整体的布局
+// 		box-sizing: border-box;
+// 		padding:10px;
+// 	}
+// 	img{
+// 		display: block;
+// 		width: 100%;
+// 	}
+// }
+
+/* flexbox1 */
+.masonry_layout_list{
+	display: flex;
+	flex-flow: column wrap;//允许换行
+	width: 100%;
+	height: 800px;//一定要有这个高度，不能不写，否则容器就无法包裹住项目列表，所以如果做响应式的话，就要设置不同条件下的高度值
+	li{
+		width: 220px;
+		padding: 10px;
+	}
+	img{
+		display: block;
+		width: 100%;
+	}
+}
